@@ -19,3 +19,26 @@ body {
   width: 343px;
   height: 91px;
 }
+
+.line-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.line-up span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -1.8rem;
+}
+
+.number {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 1.1rem;
+  margin-top: -3rem;
+}
