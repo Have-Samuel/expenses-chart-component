@@ -9,4 +9,13 @@
 
 body {
   background-color: #f2d5ff;
+  height: 667px;
+}
+
+.upper-section {
+  margin: 5rem auto;
+  background-color: #ec755d;
+  border-radius: 5px;
+  width: 343px;
+  height: 91px;
 }
