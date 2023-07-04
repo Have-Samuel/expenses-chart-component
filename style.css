@@ -86,8 +86,9 @@ body {
   border-radius: 5px;
   position: absolute;
   height: calc(var(--barSize) * 1%);
-  width: 80%;
+  width: 85%;
   bottom: 0;
+  cursor: pointer;
 }
 
 .chart-item:nth-child(1) .bar-item {
@@ -118,6 +119,31 @@ body {
   background-color: magenta;
 }
 
+.bar-item:hover::before {
+  content: attr(title);
+  position: absolute;
+  background-color: #382314;
+  border-radius: 4px;
+  top: -33px;
+  left: 0;
+  color: #fff;
+  padding: 8px 4px;
+  font-size: 0.57rem;
+}
+
+.bar-item:hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -5px;
+  left: 13px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #382314;
+  z-index: 2;
+}
+
 .bar-label {
   margin-top: 0.5rem;
   margin-left: 0.9rem;
@@ -125,4 +151,3 @@ body {
   font-size: 0.6rem;
   font-weight: 500;
 }
-
