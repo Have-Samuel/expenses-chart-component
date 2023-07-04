@@ -211,3 +211,65 @@ hr {
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .upper-section {
+    width: 540px;
+    height: 125px;
+  }
+
+  .line-up {
+    padding: 0 1.5rem;
+  }
+
+  .line-up span {
+    font-size: 1rem;
+  }
+
+  .number {
+    margin-top: -3.7rem;
+    font-size: 1.6rem;
+    padding-left: 0.7rem;
+  }
+
+  .lower-cont {
+    width: 100%;
+    height: 400px;
+  }
+
+  .lower-cont p {
+    font-size: 1rem;
+  }
+
+  .container {
+    margin: 1rem auto;
+  }
+
+  .bar {
+    height: 120px;
+    width: 30px;
+  }
+
+  .bar-item:hover::before {
+    font-size: 0.5rem;
+  }
+
+  .bar-label {
+    font-size: 0.5rem;
+  }
+
+  .base .left span {
+    font-size: 0.7rem;
+  }
+
+  .base .right span {
+    font-size: 0.7rem;
+  }
+
+  .base .left .cash {
+    font-size: 1.2rem;
+  }
+
+  .base .right .percent {
+    font-size: 0.9rem;
+  }
+}
