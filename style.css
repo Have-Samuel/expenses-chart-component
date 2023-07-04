@@ -68,27 +68,61 @@ body {
 }
 
 .bar {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1rem;
   position: relative;
   height: 200px;
-  width: 43px;
-  background-image:
-    linear-gradient(var(--border-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%;
+  width: 42px;
 }
 
-.cart-item:last-child {
+.chart-item:last-child .bar {
   margin-right: 0;
-  border-right: 1px solid var(--border-color);
 }
 
 .bar-item {
+  border-radius: 5px;
   position: absolute;
   height: calc(var(--barSize) * 1%);
-  width: 100%;
+  width: 80%;
   bottom: 0;
+}
+
+.chart-item:nth-child(1) .bar-item {
+  background-color: #ec755d;
+}
+
+.chart-item:nth-child(2) .bar-item {
+  background-color: #71d0ff;
+}
+
+.chart-item:nth-child(3) .bar-item {
+  background-color: #ec755d;
+}
+
+.chart-item:nth-child(4) .bar-item {
+  background-color: #ec755d;
+}
+
+.chart-item:nth-child(5) .bar-item {
+  background-color: #ec755d;
+}
+
+.chart-item:nth-child(6) .bar-item {
+  background-color: yellow;
+}
+
+.chart-item:nth-child(7) .bar-item {
+  background-color: magenta;
 }
 
 .bar-label {
   margin-top: 0.5rem;
+  margin-left: 0.9rem;
+  color: #92857a;
+  font-size: 0.6rem;
+  font-weight: 500;
 }
+
