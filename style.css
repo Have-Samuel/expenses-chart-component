@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --border-color: #eaeaea;
+}
+
 body {
   background-color: #f2d5ff;
   height: 667px;
@@ -51,4 +55,40 @@ body {
   margin: -4rem auto;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+}
+
+.container {
+  margin: 2rem auto;
+  width: fit-content;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  position: relative;
+  height: 200px;
+  width: 43px;
+  background-image:
+    linear-gradient(var(--border-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%;
+}
+
+.cart-item:last-child {
+  margin-right: 0;
+  border-right: 1px solid var(--border-color);
+}
+
+.bar-item {
+  position: absolute;
+  height: calc(var(--barSize) * 1%);
+  width: 100%;
+  bottom: 0;
+}
+
+.bar-label {
+  margin-top: 0.5rem;
 }
