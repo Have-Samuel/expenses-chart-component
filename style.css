@@ -57,6 +57,17 @@ body {
   box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
 }
 
+.lower-cont p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #382314;
+  text-align: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding-top: 2rem;
+  text-shadow: 2px 2px 4px #9c7355;
+}
+
 .container {
   display: flex;
   margin: 2rem auto;
@@ -75,7 +86,7 @@ body {
   align-items: center;
   margin: 0.1rem;
   position: relative;
-  height: 200px;
+  height: 160px;
   width: 42px;
 }
 
@@ -142,7 +153,6 @@ body {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #382314;
-  z-index: 2;
 }
 
 .bar-label {
@@ -152,3 +162,52 @@ body {
   font-size: 0.6rem;
   font-weight: 500;
 }
+
+hr {
+  width: 80%;
+  border: 1px solid var(--border-color);
+  margin: -1rem auto 1rem auto;
+}
+
+.base {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.base .left {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+.base .right {
+  margin-right: 1.5rem;
+  margin-top: 2rem;
+}
+
+.base .left span {
+  color: #92857a;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.base .right span {
+  color: #92857a;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.base .left .cash {
+  color: #382314;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.base .right .percent {
+  color: #382314;
+  font-size: 1rem;
+  margin-left: 3.6rem;
+  font-weight: 700;
+}
+
