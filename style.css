@@ -185,3 +185,29 @@ hr {
   margin-right: 1.5rem;
   margin-top: 2rem;
 }
+
+.base .left span {
+  color: #92857a;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.base .right span {
+  color: #92857a;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.base .left .cash {
+  color: #382314;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.base .right .percent {
+  color: #382314;
+  font-size: 1rem;
+  margin-left: 3.6rem;
+  font-weight: 700;
+}
+
