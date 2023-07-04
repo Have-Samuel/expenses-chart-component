@@ -153,7 +153,6 @@ body {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #382314;
-  z-index: 2;
 }
 
 .bar-label {
@@ -167,7 +166,22 @@ body {
 hr {
   width: 80%;
   border: 1px solid var(--border-color);
-  margin: -8rem auto 1rem auto;
+  margin: -1rem auto 1rem auto;
 }
 
+.base {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
 
+.base .left {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+.base .right {
+  margin-right: 1.5rem;
+  margin-top: 2rem;
+}
