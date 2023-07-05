@@ -102,8 +102,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Author
 
 - [Have Samuel](https://my-portifolio-git-dev-have-samuel.vercel.app/)
-  - [@Have-Samuel](https://www.frontendmentor.io/profile/Have-Samuel)
-  - [@samhave](https://twitter.com/samhave)
+- [@Have-Samuel](https://www.frontendmentor.io/profile/Have-Samuel)
+- [@samhave](https://twitter.com/samhave)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
