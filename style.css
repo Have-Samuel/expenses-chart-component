@@ -211,3 +211,103 @@ hr {
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .upper-section {
+    width: 540px;
+    height: 125px;
+  }
+
+  .line-up {
+    padding: 0 1.5rem;
+  }
+
+  .line-up span {
+    font-size: 1rem;
+  }
+
+  .number {
+    margin-top: -3.7rem;
+    font-size: 1.6rem;
+    padding-left: 0.7rem;
+  }
+
+  .lower-cont {
+    width: 540px;
+    height: 511px;
+  }
+
+  .lower-cont p {
+    font-size: 2rem;
+    margin-left: 2.2rem;
+    margin-bottom: 4rem;
+    text-align: left;
+    text-shadow: none;
+  }
+
+  .bar {
+    width: 40px;
+    margin: 1rem;
+    padding: 0 1.5rem;
+  }
+
+  .bar-item {
+    margin: 0 1rem 0.5rem -1rem;
+    height: calc(var(--barSize) * 1.8%);
+    width: 90%;
+  }
+
+  .bar-item:hover::before {
+    content: attr(title);
+    position: absolute;
+    top: -40px;
+    left: -8px;
+    padding: 8px 8px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #382314;
+  }
+
+  .bar-item:hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -14px;
+    left: 16px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #382314;
+  }
+
+  .chart-item:last-child .bar {
+    margin-right: 0;
+  }
+
+  .bar-label {
+    font-size: 1rem;
+    margin-left: 0.9rem;
+  }
+
+  .base {
+    margin-top: -1rem;
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
+  }
+
+  .base .left span {
+    font-size: 1.19rem;
+  }
+
+  .base .right span {
+    font-size: 1.19rem;
+  }
+
+  .base .left .cash {
+    font-size: 3rem;
+  }
+
+  .base .right .percent {
+    font-size: 1.4rem;
+    margin-left: 4.5rem;
+  }
+}
