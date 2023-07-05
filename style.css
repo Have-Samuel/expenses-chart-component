@@ -283,28 +283,28 @@ hr {
     margin-right: 0;
   }
 
-  /* .bar-item:hover::before {
-    font-size: 0.5rem;
-  } */
-
   .bar-label {
-    font-size: 0.5rem;
-    margin-left: 2.4rem;
+    font-size: 1rem;
+    margin-left: 0.9rem;
+  }
+
+  .base {
+    margin-top: -1rem;
   }
 
   .base .left span {
-    font-size: 0.7rem;
+    font-size: 1.19rem;
   }
 
   .base .right span {
-    font-size: 0.7rem;
+    font-size: 1.19rem;
   }
 
   .base .left .cash {
-    font-size: 1.2rem;
+    font-size: 3rem;
   }
 
   .base .right .percent {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
   }
 }
