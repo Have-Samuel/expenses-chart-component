@@ -290,6 +290,8 @@ hr {
 
   .base {
     margin-top: -1rem;
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
   }
 
   .base .left span {
@@ -306,5 +308,6 @@ hr {
 
   .base .right .percent {
     font-size: 1.4rem;
+    margin-left: 4.5rem;
   }
 }
