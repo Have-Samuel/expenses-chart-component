@@ -142,10 +142,23 @@ const config = {
 - [FrontendMentor](https://www.frontendmentor.io/profile/Have-Samuel)
 - [Twitter](https://twitter.com/samhave)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+## 🤝 Contributing
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Have-Samuel/expenses-chart-component/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+## Acknowledgments
+
+- 🎉 Thanks to Frontend Mentor 
+- 👋 Thumbs Up to [@Trekab](https://github.com/trekab)
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
