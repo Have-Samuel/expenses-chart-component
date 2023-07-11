@@ -50,7 +50,7 @@ body {
 
 .lower-cont {
   background-color: #fff;
-  height: 421px;
+  height: 390px;
   width: 343px;
   margin: -4rem auto;
   border-radius: 8px;
@@ -74,11 +74,11 @@ body {
   width: fit-content;
 }
 
-.chart-container {
+/* .chart-container {
   display: flex;
   align-items: center;
-}
-
+} */
+/* 
 .bar {
   display: flex;
   flex-direction: column-reverse;
@@ -88,11 +88,11 @@ body {
   position: relative;
   height: 160px;
   width: 42px;
-}
+} */
 
-.chart-item:last-child .bar {
+/* .chart-item:last-child .bar {
   margin-right: 0;
-}
+} */
 
 .bar-item {
   border-radius: 5px;
@@ -101,58 +101,6 @@ body {
   width: 85%;
   bottom: 0;
   cursor: pointer;
-}
-
-.chart-item:nth-child(1) .bar-item {
-  background-color: #ec755d;
-}
-
-.chart-item:nth-child(2) .bar-item {
-  background-color: #71d0ff;
-}
-
-.chart-item:nth-child(3) .bar-item {
-  background-color: #ec755d;
-}
-
-.chart-item:nth-child(4) .bar-item {
-  background-color: #ec755d;
-}
-
-.chart-item:nth-child(5) .bar-item {
-  background-color: #ec755d;
-}
-
-.chart-item:nth-child(6) .bar-item {
-  background-color: yellow;
-}
-
-.chart-item:nth-child(7) .bar-item {
-  background-color: magenta;
-}
-
-.bar-item:hover::before {
-  content: attr(title);
-  position: absolute;
-  background-color: #382314;
-  border-radius: 4px;
-  top: -33px;
-  left: 0;
-  color: #fff;
-  padding: 8px 4px;
-  font-size: 0.57rem;
-}
-
-.bar-item:hover::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: -5px;
-  left: 13px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid #382314;
 }
 
 .bar-label {
@@ -166,7 +114,7 @@ body {
 hr {
   width: 80%;
   border: 1px solid var(--border-color);
-  margin: -1rem auto 1rem auto;
+  margin: -1.5rem auto 1rem auto;
 }
 
 .base {
@@ -178,12 +126,12 @@ hr {
 
 .base .left {
   margin-left: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .base .right {
   margin-right: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .base .left span {
