@@ -136,13 +136,11 @@ const config = {
 
 - [ChartJS-Tutorials](https://www.youtube.com/@ChartJS-tutorials) - This helped me to go throught the whole project, I really liked this pattern and will use it going forward.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
-- [Have Samuel](https://my-portifolio-git-dev-have-samuel.vercel.app/)
-- [@Have-Samuel](https://www.frontendmentor.io/profile/Have-Samuel)
-- [@samhave](https://twitter.com/samhave)
+- [linkedIn](https://www.linkedin.com/in/have-samuel/)
+- [FrontendMentor](https://www.frontendmentor.io/profile/Have-Samuel)
+- [Twitter](https://twitter.com/samhave)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
