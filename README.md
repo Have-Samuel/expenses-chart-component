@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - [Github](https://github.com/Have-Samuel/expenses-chart-component)
-- [Live Link]()
+- [Live Link](https://have-samuel.github.io/expenses-chart-component/)
 
 ## My process
 
