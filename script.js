@@ -1,37 +1,37 @@
 // const myChart = document.querySelector('#myChart');
 
 // // Global Options
-// Chart.defaults.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-// Chart.defaults.fontColor = '#777';
-// Chart.defaults.fontSize = 16;
-// Chart.defaults.fontFamily = 'Helvetica Neue';
-Chart.defaults.fontStyle = 'bold';
 Chart.defaults.borderColor = '#fff';
 
-new Chart(myChart, {
+// SetUp Block
+const data = {
+  labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
+  datasets: [{
+    label: 'Amount of Cash',
+    data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+    // borderWidth: 0.5,
+    borderRadius: 5,
+    backgroundColor: [
+      '#ec755d',
+      '#ec755d',
+      '#76B5BC',
+      '#ec755d',
+      '#ec755d',
+      '#ec755d',
+      '#ec755d',
+    ],
+  }],
+};
+
+// Configuring the chart
+const config = {
   type: 'bar',
-  data: {
-    labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
-      label: 'Amount of Cash',
-      data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
-      // borderWidth: 0.5,
-      borderRadius: 5,
-      backgroundColor: [
-        '#ec755d',
-        '#ec755d',
-        '#76B5BC',
-        '#ec755d',
-        '#ec755d',
-        '#ec755d',
-        '#ec755d',
-      ],
-    }],
-  },
+  data,
   options: {
     plugins: {
       tooltip: {
         yAlign: 'bottom',
+        displayColors: false,
       },
       legend: {
         display: false,
@@ -48,8 +48,14 @@ new Chart(myChart, {
           drawBorder: false,
         },
       },
-    }
+    },
   },
+};
+
+// Rendering the chart
+
+new Chart(myChart, {
+
 });
 
 // const ctx = document.querySelector('#myChart');
