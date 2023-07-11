@@ -36,18 +36,10 @@ Users should be able to:
 ### Desktop
 ![](./design/desktop-design.jpg)
 
-
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
 - [Github](https://github.com/Have-Samuel/expenses-chart-component)
-- [Live Link](https://your-live-site-url.com)
+- [Live Link]()
 
 ## My process
 
@@ -58,20 +50,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Chart.JS](https://www.chartjs.org/docs/latest/) - Chart.JS library
+- javascript
+- Git & Gitworkflow
+- Positioning
+- Best practices
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+
 ```
 ```css
 .proud-of-this-css {
@@ -79,9 +69,77 @@ To see how you can add code snippets, see below:
 }
 ```
 ```js
-const proudOfThisFunc = () => {
+Chart.defaults.borderColor = '#fff';
+
+// SetUp Block
+
+// Data
+const numbers = [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48];
+const data = {
+  labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
+  datasets: [{
+    label: 'Amount of Cash',
+    data: numbers,
+    borderRadius: 5,
+    backgroundColor: [
+      '#ec755d',
+      '#ec755d',
+      '#76B5BC',
+      '#ec755d',
+      '#ec755d',
+      '#ec755d',
+      '#ec755d',
+    ],
+  }],
+};
+
+// Tooltip title
+const titleTooltip = (tooltipItems) => `£${numbers[tooltipItems[0].dataIndex]}`;
+
+const labelTooltip = () => '';
+// Configuring the chart
+const config = {
+  type: 'bar',
+  data,
+  options: {
+    onHover: (event, chartElement) => {
+      if (event.native) {
+        event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+      }
+    },
+    plugins: {
+      tooltip: {
+        yAlign: 'bottom',
+        displayColors: false,
+        titleMarginBottom: 0,
+        backgroundColor: '#382314',
+        borderColor: '#fff',
+        borderWidth: 0.5,
+        callbacks: {
+          title: titleTooltip,
+          label: labelTooltip,
+        },
+      },
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          display: false,
+        },
+        grid: {
+          drawTicks: false,
+          drawBorder: false,
+        },
+      },
+    },
+  },
+};
   console.log('🎉')
-}
+
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
