@@ -24,7 +24,9 @@ const data = {
 };
 
 // Tooltip title
-const titleTooltip = (tooltipItems) => numbers[tooltipItems[0].dataIndex];
+const titleTooltip = (tooltipItems) => `£${numbers[tooltipItems[0].dataIndex]}`;
+
+const labelTooltip = () => '';
 // Configuring the chart
 const config = {
   type: 'bar',
@@ -36,6 +38,7 @@ const config = {
         displayColors: false,
         callbacks: {
           title: titleTooltip,
+          label: labelTooltip,
         },
       },
       legend: {
