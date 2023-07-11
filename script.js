@@ -30,6 +30,9 @@ new Chart(myChart, {
   },
   options: {
     plugins: {
+      tooltip: {
+        yAlign: 'bottom',
+      },
       legend: {
         display: false,
       },
