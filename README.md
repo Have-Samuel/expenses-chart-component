@@ -5,21 +5,17 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
-
 ### The challenge
 
 Users should be able to:
@@ -31,21 +27,16 @@ Users should be able to:
 - **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
 
 ### Screenshot
+### Mobile
+![](./design/mobile-design.jpg)
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+### Desktop
+![](./design/desktop-design.jpg)
 
 ### Links
 
 - [Github](https://github.com/Have-Samuel/expenses-chart-component)
-- [Live Link](https://your-live-site-url.com)
+- [Live Link]()
 
 ## My process
 
@@ -56,59 +47,118 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Chart.JS](https://www.chartjs.org/docs/latest/) - Chart.JS library
+- javascript
+- Git & Gitworkflow
+- Positioning
+- Best practices
 
 ### What I learned
+For the `Chart.js`, you have to critally learn the Library for proper use of the concepts, and below is some of the code 🎉 that I learnt for the whole process.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+Chart.defaults.borderColor = '#fff';
+
+// SetUp Block
+
+const numbers = [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48];
+const data = {
+  labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
+  datasets: [{
+    label: 'Amount of Cash',
+    data: numbers,
+    borderRadius: 5,
+    backgroundColor: [
+      '#ec755d',
+      '#ec755d',
+      '#76B5BC',
+      '#ec755d',
+      '#ec755d',
+      '#ec755d',
+      '#ec755d',
+    ],
+  }],
+};
+
+// Tooltip title
+const titleTooltip = (tooltipItems) => `£${numbers[tooltipItems[0].dataIndex]}`;
+
+const labelTooltip = () => '';
+// Configuring the chart
+const config = {
+  type: 'bar',
+  data,
+  options: {
+    onHover: (event, chartElement) => {
+      if (event.native) {
+        event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+      }
+    },
+    plugins: {
+      tooltip: {
+        yAlign: 'bottom',
+        displayColors: false,
+        titleMarginBottom: 0,
+        backgroundColor: '#382314',
+        borderColor: '#fff',
+        borderWidth: 0.5,
+        callbacks: {
+          title: titleTooltip,
+          label: labelTooltip,
+        },
+      },
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          display: false,
+        },
+        grid: {
+          drawTicks: false,
+          drawBorder: false,
+        },
+      },
+    },
+  },
+};
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+  -  Mouse Cursor Onhover
+  - [ToolTip](https://www.chartjs.org/docs/latest/configuration/tooltip.html)
+  - Axes [styling](https://www.chartjs.org/docs/latest/axes/styling.html)
+  - [Migration](https://www.chartjs.org/docs/latest/axes/styling.html)
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [ChartJS-Tutorials](https://www.youtube.com/@ChartJS-tutorials) - This helped me to go throught the whole project, I really liked this pattern and will use it going forward.
 
 ## Author
 
-- [Have Samuel](https://my-portifolio-git-dev-have-samuel.vercel.app/)
-- [@Have-Samuel](https://www.frontendmentor.io/profile/Have-Samuel)
-- [@samhave](https://twitter.com/samhave)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- [linkedIn](https://www.linkedin.com/in/have-samuel/)
+- [FrontendMentor](https://www.frontendmentor.io/profile/Have-Samuel)
+- [Twitter](https://twitter.com/samhave)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+## 🤝 Contributing
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Have-Samuel/expenses-chart-component/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+## Acknowledgments
+
+- 🎉 Thanks to Frontend Mentor 
+- 👋 Thumbs Up to [@Trekab](https://github.com/trekab)
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
