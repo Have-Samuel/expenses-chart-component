@@ -34,6 +34,11 @@ const config = {
   type: 'bar',
   data,
   options: {
+    onHover: (event, chartElement) => {
+      if (chartElement.length) {
+        console.log(chartElement);
+      }
+    },
     plugins: {
       tooltip: {
         yAlign: 'bottom',
