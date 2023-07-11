@@ -36,6 +36,10 @@ const config = {
       tooltip: {
         yAlign: 'bottom',
         displayColors: false,
+        titleMarginBottom: 0,
+        backgroundColor: '#382314',
+        borderColor: '#fff',
+        borderWidth: 0.5,
         callbacks: {
           title: titleTooltip,
           label: labelTooltip,
