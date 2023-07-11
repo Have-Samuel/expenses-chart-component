@@ -74,7 +74,7 @@ const config = {
 // Rendering the chart
 const myChart = new Chart(document.getElementById('myChart'), config);
 
-Chart.defaults.font.size = 9;
+Chart.defaults.font.size = 10;
 Chart.deffaults.font.family = 'DM Sans';
 Chart.defaults.font.weight = '500';
 Chart.defaults.font.color = '#92857a';
