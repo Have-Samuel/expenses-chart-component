@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // // Global Options
 Chart.defaults.borderColor = '#fff';
 
