@@ -1,15 +1,15 @@
-// const myChart = document.querySelector('#myChart');
-
 // // Global Options
 Chart.defaults.borderColor = '#fff';
 
 // SetUp Block
+
+// Data
+const numbers = [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48];
 const data = {
   labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
   datasets: [{
     label: 'Amount of Cash',
-    data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
-    // borderWidth: 0.5,
+    data: numbers,
     borderRadius: 5,
     backgroundColor: [
       '#ec755d',
@@ -23,6 +23,8 @@ const data = {
   }],
 };
 
+// Tooltip title
+const titleTooltip = (tooltipItems) => numbers[tooltipItems[0].dataIndex];
 // Configuring the chart
 const config = {
   type: 'bar',
@@ -32,6 +34,9 @@ const config = {
       tooltip: {
         yAlign: 'bottom',
         displayColors: false,
+        callbacks: {
+          title: titleTooltip,
+        },
       },
       legend: {
         display: false,
@@ -53,66 +58,4 @@ const config = {
 };
 
 // Rendering the chart
-
-new Chart(myChart, {
-
-});
-
-// const ctx = document.querySelector('#myChart');
-
-// new Chart(ctx, {
-//   type: 'bar',
-//   data: {
-//     labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
-//     datasets: [{
-//       label: '# of Votes',
-//       data: [12, 19, 3, 5, 2, 3, 4],
-//       borderWidth: 1,
-//       backgroundColor: [
-//         '#ec755d',
-//       ],
-//     }],
-//   },
-//   options: {
-//     scales: {
-//     },
-//     title: {
-//       text: 'Amount',
-//       color: 'red',
-//     },
-//   },
-// });
-
-// new Chart(ctx, {
-//   type: 'line',
-//   data: {
-//     datasets: [{
-//       data: [10, 20, 30, 40, 50, 60],
-//       label: 'Left dataset',
-
-//       // This binds the dataset to the left y axis
-//       yAxisID: 'left-y-axis',
-//     }, {
-//       data: [1, 2, 3, 4, 5, 6],
-//       label: 'Right dataset',
-
-//       // This binds the dataset to the right y axis
-//       yAxisID: 'right-y-axis',
-//     }],
-//     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-//   },
-//   options: {
-//     scales: {
-//         xAxes: [{
-//             gridLines: {
-//                 drawOnChartArea: false,
-//             }
-//         }],
-//         yAxes: [{
-//             gridLines: {
-//                 drawOnChartArea: false,
-//             }
-//         }],
-//     },
-//   }
-// });
+const myChart = new Chart(document.getElementById('myChart'), config);
